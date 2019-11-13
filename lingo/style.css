@@ -1,5 +1,5 @@
 body {
-background: brown;
+background: #faefaa;
 }
 
 * {
@@ -56,27 +56,31 @@ button:hover {
 
 .correct {
   background: green;
+  border-radius: 0px 0px 0px 0px;
+  -moz-border-radius: 0px 0px 0px 0px;
+  -webkit-border-radius: 0px 0px 0px 0px;
+  border: 4px double #000000;
 }
 
 .wrongplace {
-  background: red;
+  background: yellow;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 4px double #000000;
 }
 
 .default {
-  background: #ffff99;
+  background: #c4c465;
 }
 
 .square {
   vertical-align:top;
   margin-top: 4px;
-  border: 1px black solid;
-  border-radius: 5px;
   display: inline-block;
   height: 1.25em;
   width: 1.25em;
-  /*height: 70px;
-  width: 70px;*/
-  
+
   text-align: center;
   font-size: 3.5em;
   font-family: 'Lato', sans-serif;
