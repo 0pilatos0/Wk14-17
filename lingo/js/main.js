@@ -1,3 +1,7 @@
+// Olaf Schouten //
+// Davinci college //
+// Lingo opdracht //
+
 var input = document.createElement("INPUT");
 var button = document.getElementById('checkButton');
 var randomWordArray = words[Math.floor(Math.random() * words.length)];
@@ -12,6 +16,7 @@ container.classList.add("container");
 
 console.log(randomWordArray);
 
+//---- Maken van blokjes ----//
 for (b = 1; b <= 5; b++) {
 	var row = document.createElement("DIV");
 	row.id = "row" + b;
@@ -22,7 +27,7 @@ for (b = 1; b <= 5; b++) {
 	input.setAttribute('placeholder', 'voer je antwoord in');
 	input.setAttribute("maxLength", "5");
 
-
+	//---- Divjes aanmaken met een class en een id ----//
 	for (var i = 0; i < 5; i++) {
 		var miniBox = document.createElement("DIV");
 		miniBox.classList.add("miniBox");
@@ -60,7 +65,7 @@ input.onkeypress = function (event) {
 			//---- Dit zorgt ervoor dat je 1 seconden wacht tot dat je de alerts krijgt ----//
 			setInterval(function () {
 				alert("Dit was je laatse kans!");
-				alert("Het woord was: " + randomWordArray);
+				alert("Het woord was:  " + randomWordArray);
 				location.reload();
 			}, 500);
 		}
@@ -85,7 +90,7 @@ function check() {
 		if (randomWordParts[i] == userInput[i]) {
 			goed[i] = randomWordParts[i];
 			//---- Maakt de letters op de goede plek goen en null ----//
-			document.getElementById("row" + (activerow - 1) + "box" + i).classList.add("green");
+			document.getElementById("row" + (activerow - 1) + "box" + i).style.backgroundColor = "green";
 			randomWordPartsCopy[i] = null;
 		}
 
