@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Master Mind</title>
+	<link rel="stylesheet" type="text/css" href="./main.css">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<section id="rows"></section>
+	<div id="buttons">
+		<button id="check_btn" onclick="check()">check</button>
+		<button id="restart_btn" onclick="restart()" >Restart</button>
+	</div>
+	<div id="button_div">
+		<button id="red" class="color_btn" onclick="select_color(0)"></button>
+		<button id="green" class="color_btn" onclick="select_color(1)"></button>
+		<button id="purple" class="color_btn" onclick="select_color(2)"></button>
+		<button id="blue" class="color_btn" onclick="select_color(3)"></button>
+		<button id="yellow" class="color_btn" onclick="select_color(4)"></button>
+		<button id="grey" class="color_btn" onclick="select_color(5)"></button>
+	</div>
+	<script src="./masterMind.js"></script>
+</body>
+</html>
