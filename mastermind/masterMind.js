@@ -57,43 +57,27 @@ function check(){
 	if(toelaten && rowcount <= 12){
 		var copy = color_a.slice();
 		var userCopy = circles_color.slice();
-		console.log(userCopy)
-		console.log(copy)
-		for(i = 0; i<4; i++){
-			var positie = copy.indexOf(userCopy[i]);
-			if(copy[i] == userCopy[i]){
-				check_array.push(2);
-				userCopy[i] = null
-				copy[i] = null;
-				correct_right++;
-			}
-			else if(d){
-				
-			}
-			console.log(positie)
-		}
-		console.log(userCopy)
-		console.log(copy)
-		/*for (var i = 0; i < 4; i++) {
+		
+		for (var i = 0; i < 4; i++) {
 			if(userCopy[i] == copy[i]){
-				console.log("Kleur is correct, op de juiste plaats");
 				check_array.push(2);
 				copy[i] = null;
 				userCopy[i] = null;
 				correct_right++;
 			}
-			else if(copy[i] != null){
+		}
+		for (var i = 0; i < 4; i++){
+			if(userCopy[i] != null){
+
 				var positie = copy.indexOf(userCopy[i]);
 				if (positie > -1) {
-					console.log("Kleur is correct, niet op de juiste plaats");
 					check_array.push(1);
-					copy[i] = null;
+					copy[positie] = null;
 					userCopy[i] = null;
 					
 				}
 			}
-			copy.shift()
-		}*/
+		}
 
 		for(var f = 0; f < 4; f++){
 			if(check_array[f] == 2){
